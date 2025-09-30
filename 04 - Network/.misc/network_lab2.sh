@@ -8,9 +8,6 @@ do
     j=$((i + 4))
     ip="192.168.40.$j"
 
-    # Clean up known_hosts for this IP to avoid verification conflicts
-    ssh-keygen -R "$ip"
-
     ssh -o StrictHostKeyChecking=no -i /home/louis/.ssh/id_rsa louis@$ip bash -c "'
         set -e
         export DEBIAN_FRONTEND=noninteractive
