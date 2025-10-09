@@ -113,7 +113,7 @@
   - Troubleshoot network connectivity
 
 - **Configure secure access to virtual networks**
-  - Create and configure Network Security Groups  (NSGs) and Application Security Groups 
+  - Create and configure Network Security Groups (NSGs) and Application Security Groups 
   - Evaluate effective security rules in NSGs
   - Implement Azure Bastion
   - Configure service endpoints for Azure platform as a service (PaaS)
@@ -152,6 +152,8 @@
 
 - KodeKloud AZ-104 course by Rithing Skaria: https://learn.kodekloud.com/user/courses/az-104-microsoft-azure-administrator  
 - Microsoft Learn - Course AZ-104: https://learn.microsoft.com/en-us/training/courses/az-104t00
-- Networking part : https://learn.microsoft.com/en-us/azure/networking/fundamentals/ 
+- Networking part : 
+  - https://learn.microsoft.com/en-us/azure/networking/fundamentals/ 
+  - https://learn.microsoft.com/en-us/azure/virtual-network/
 
 

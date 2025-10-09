@@ -174,7 +174,7 @@ In this example, I'm adding my public key located on my machine on **~/.ssh/id_r
 $ssh = @{
     PublicKey = $(Get-Content -Path "~/.ssh/id_rsa.pub" -Raw)
     Name = "sshkey_lolecat"
-    ResourceGroupName = "network_lab1"
+    ResourceGroupName = "network_lab2"
 }
 
 New-AzSshKey @ssh
