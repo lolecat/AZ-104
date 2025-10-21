@@ -8,13 +8,13 @@ We'll deploy the following architecture with Powershell:
 The Azure Bastion host facilitates secure and seamless SSH connectivity to the virtual machines directly in the Azure portal over SSL.  
 
 
-Cmdlets used in this lab:
+Cmdlets associated with the lab topic:
 - [New-AzVirtualNetwork](https://learn.microsoft.com/en-us/powershell/module/az.network/new-azvirtualnetwork)
 - [Add-AzVirtualNetworkSubnetConfig](https://learn.microsoft.com/en-us/powershell/module/az.network/add-azvirtualnetworksubnetconfig)
 - [Set-AzVirtualNetwork](https://learn.microsoft.com/en-us/powershell/module/az.network/set-azvirtualnetwork)
 - [New-AzPublicIpAddress](https://learn.microsoft.com/en-us/powershell/module/az.network/new-azpublicipaddress)
 - [New-AzVM](https://learn.microsoft.com/en-us/powershell/module/az.compute/new-azvm)
-
+- [New-AzBastion](https://learn.microsoft.com/en-us/powershell/module/az.network/new-azbastion)
 
 ---
 ### 1/ Resource group

@@ -11,6 +11,22 @@ We'll have an Application Gateway exposed to the Internet, listening on HTTP:80 
 ➡ The Jump host VM-JUMP, with its NSG and Public IP, is just here to configure the two backends virtual machines, VM1 and VM2.  
 It will run bash a script as a VM Extension, to install apache and configure a default page on the backend VMs, each with different color, so we can see on which VM the Loadbalancer lands us.
 
+
+Cmdlets associated with the lab topic:
+- [New-AzAvailabilitySet](https://)
+- [New-AzNetworkSecurityRuleConfig](https://)
+- [New-AzNetworkSecurityGroup](https://)
+- [Set-AzVMExtension](https://)
+- [New-AzApplicationGatewayIPConfiguration](https://)
+- [New-AzApplicationGatewayFrontendIPConfig](https://)
+- [New-AzApplicationGatewayFrontendPort](https://)
+- [New-AzApplicationGatewayBackendAddressPool ](https://)
+- [New-AzApplicationGatewayBackendHttpSetting](https://)
+- [New-AzApplicationGatewayHttpListener](https://)
+- [New-AzApplicationGatewayRequestRoutingRule](https://)
+- [New-AzApplicationGatewaySku](https://)
+- [New-AzApplicationGateway](https://)
+
 ---
 
 ### 1/ Resource group
@@ -526,4 +542,3 @@ RawContent        : HTTP/1.1 200 OK
 ```powershell
 Get-AzResourceGroup -Name "network_lab2" | Remove-AzResourceGroup -Force
 ```
-
