@@ -46,12 +46,34 @@
 
 ### Manage Azure subscriptions and governance
   #### Implement and manage Azure Policy  
+  - [Azure Policies overview](https://learn.microsoft.com/en-us/azure/governance/policy/overview)
+  - [Create and manage policies](https://learn.microsoft.com/en-us/azure/governance/policy/tutorials/create-and-manage)
+  - [Assign a policy - Portal](https://learn.microsoft.com/en-us/azure/governance/policy/assign-policy-portal)
+  - [Assign a policy - Powershell](https://learn.microsoft.com/en-us/azure/governance/policy/assign-policy-powershell)
+
   #### Configure resource locks  
-  #### Apply and manage tags on resources  
+  - [Lock Azure resources to protect infrastructure](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/lock-resources?tabs=json)
+
+  #### Apply and manage tags on resources
+  - [Use tags to organize Azure resources and management hierarchy](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources)
+  - [Manage tag governance with Azure Policy](https://learn.microsoft.com/en-us/azure/governance/policy/tutorials/govern-tags)
+  - [Manage tags - Portal](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources-portal)
+  - [Manage tags - Powershell](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources-powershell)
+
   #### Manage resource groups  
-  #### Manage subscriptions  
+  - [Resource groups overview](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview#resource-groups)
+  - [Manage resource groups - Portal](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal)
+  - [Manage resource groups - Powershell](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-powershell)
+  - [Azure Resource Manager resource group and resource deletion](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/delete-resource-group?tabs=azure-powershell)
+
+  #### Manage subscriptions 
+  - []()
+
   #### Manage costs by using alerts, budgets, and Azure Advisor recommendations  
+  - []()
+
   #### Configure management groups  
+  - []()
 ---
 
 ### 🎞  Microsoft Learn Youtube videos

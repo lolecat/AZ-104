@@ -147,11 +147,11 @@
 
 ## 📚 Resources used
 
-- [Identity and governance](./01%20-%20Identity/readme.md)
-- [Storage](./02%20-%20Storage/readme.md)
-- [Compute](./03%20-%20Compute/readme.md)
-- [Network](./04%20-%20Network/readme.md)
-- [Monitoring](./05%20-%20Monitoring/readme.md)
+- [Section 1 - Identity and governance](./01%20-%20Identity/readme.md)
+- [Section 2 - Storage](./02%20-%20Storage/readme.md)
+- [Section 3 - Compute](./03%20-%20Compute/readme.md)
+- [Section 4 - Network](./04%20-%20Network/readme.md)
+- [Section 5 - Monitoring](./05%20-%20Monitoring/readme.md)
 
 
 
