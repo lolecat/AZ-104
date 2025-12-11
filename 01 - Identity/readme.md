@@ -67,13 +67,23 @@
   - [Azure Resource Manager resource group and resource deletion](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/delete-resource-group?tabs=azure-powershell)
 
   #### Manage subscriptions 
-  - []()
+  - [What is a cloud subscription ?](https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/cloud-subscription)
+  - [Types of billing accounts](https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/view-all-accounts)
+  - [Create subscription - Portal](https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/create-subscription)
+  - [Create subscription - Powershell](https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/programmatically-create-subscription-microsoft-customer-agreement?tabs=azure-powershell)
+  - [Elevate access for Azure global admin role](https://learn.microsoft.com/en-us/azure/role-based-access-control/elevate-access-global-admin?tabs=azure-portal%2Centra-audit-logs#next-steps)
 
   #### Manage costs by using alerts, budgets, and Azure Advisor recommendations  
-  - []()
+  - [Billing overview](https://learn.microsoft.com/en-us/azure/cost-management-billing/cost-management-billing-overview)
+  - [Cost management overview](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/overview-cost-management)
+  - [Create and manage budgets](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-acm-create-budgets?tabs=psbudget)
+  - [Use costs alerts](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending)
+  - [Costs management best practices](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-mgt-best-practices)
+  - [Azure Advisor overview](https://learn.microsoft.com/en-us/azure/advisor/advisor-overview)
 
   #### Configure management groups  
-  - []()
+  - [Management groups overview](https://learn.microsoft.com/en-us/azure/governance/management-groups/overview)
+  - [Manage resources hierarchy](https://learn.microsoft.com/en-us/azure/governance/management-groups/manage)
 ---
 
 ### 🎞  Microsoft Learn Youtube videos
@@ -82,3 +92,8 @@
 - [Administer Governance and Compliance (Part 1)](https://www.youtube.com/watch?v=jsI0lkUcq2U&list=PLahhVEj9XNTcj4dwEwRHozO3xcxI_UHYG&index=5)
 - [Administer Governance and Compliance (Part 2)](https://www.youtube.com/watch?v=6xIBgC-ALCc&list=PLahhVEj9XNTcj4dwEwRHozO3xcxI_UHYG&index=6)
 - [Administer Azure Resources](https://www.youtube.com/watch?v=Ex7EF1chJiA&list=PLahhVEj9XNTcj4dwEwRHozO3xcxI_UHYG&index=7)
+
+---
+
+### 🌐 Websites
+- [Mind Mesh Academy - Identities & Governance](https://www.mindmeshacademy.com/certifications/azure/az-104-microsoft-azure-administrator/study-guide/2-phase-2-implementing-managing-azure-identities-governance)

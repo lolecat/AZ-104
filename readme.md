@@ -152,6 +152,7 @@
 - [Section 3 - Compute](./03%20-%20Compute/readme.md)
 - [Section 4 - Network](./04%20-%20Network/readme.md)
 - [Section 5 - Monitoring](./05%20-%20Monitoring/readme.md)
+- [Mind Mesh Academy study guide](https://www.mindmeshacademy.com/certifications/azure/az-104-microsoft-azure-administrator/study-guide/)
 
 
 
