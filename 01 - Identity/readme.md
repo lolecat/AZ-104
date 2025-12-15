@@ -22,6 +22,7 @@
   #### Configure self-service password reset (SSPR)  
   - [Enable SSPR](https://learn.microsoft.com/en-us/entra/identity/authentication/tutorial-enable-sspr)
   - [Licensing requirements for SSPR](https://learn.microsoft.com/en-us/entra/identity/authentication/concept-sspr-licensing)
+  
 ---
 
 ### Manage access to Azure resources  
@@ -42,6 +43,7 @@
   - [Understand Azure role definitions](https://learn.microsoft.com/en-us/azure/role-based-access-control/role-definitions)
   - [Understand Azure role assignments](https://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments?source=recommendations)
   - [Understand scope for Azure RBAC](https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview)
+
 ---
 
 ### Manage Azure subscriptions and governance
@@ -84,6 +86,7 @@
   #### Configure management groups  
   - [Management groups overview](https://learn.microsoft.com/en-us/azure/governance/management-groups/overview)
   - [Manage resources hierarchy](https://learn.microsoft.com/en-us/azure/governance/management-groups/manage)
+
 ---
 
 ### 🎞  Microsoft Learn Youtube videos

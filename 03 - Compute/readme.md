@@ -24,6 +24,7 @@
   - [Export ARM template](https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/export-template-portal)
   - [Export Bicep file](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/export-bicep-portal)
   - [Migrate Azure resources and JSON ARM templates to use Bicep](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/migrate)
+
 ---
 
 ### Create and configure virtual machines
@@ -114,3 +115,7 @@
  - [Administer Virtual Machines, part 2](https://www.youtube.com/watch?v=oaaMcbHsamk)
  - [Administer PaaS Compute options, part 1](https://www.youtube.com/watch?v=5clKdnQCb-0)
  - [Administer PaaS Compute options, part 2](https://www.youtube.com/watch?v=hyU8TnmxnV8)
+
+---
+### 🌐 Websites
+- [Mind Mesh Academy - Managing Azure compute resources](https://www.mindmeshacademy.com/certifications/azure/az-104-microsoft-azure-administrator/study-guide/4-phase-4-deploying-managing-azure-compute-resources)

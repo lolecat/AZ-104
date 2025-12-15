@@ -20,6 +20,7 @@
 
   #### Configure identity-based access for Azure Files  
   - [Overview of Azure Files identity-based authentication](https://learn.microsoft.com/en-us/azure/storage/files/storage-files-active-directory-overview)
+
  ---
 
 ### Configure and manage storage accounts
@@ -39,6 +40,7 @@
   #### Manage data by using Azure Storage Explorer and AzCopy
   - [Get started with AzCopy](https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10?tabs=dnf)
   - [Use AzCopy](https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-files?tabs=smb-createfileshare%2Csmb-uploadfile%2Csmb-uploaddirectory%2Csmb-uploaddirectorynew%2Csmb-uploaddirectorycontents%2Csmb-uploadspecificfiles%2Csmb-usewildcard%2Csmb-uploaddatetime%2Csmb-downloadfile%2Csmb-downloaddirectory%2Csmb-downloaddirectorycontent%2Csmb-downloadspecificfiles%2Csmb-downloadwildcard%2Csmb-downloaddatetime%2Csmb-downloadsnapshotfile%2Csmb-downloadsnapshotdirectory%2Csmb-copyfiletoaccount%2Csmb-copyfilesnapshottoaccount%2Csmb-copydirectorytoaccount%2Csmb-copydirectorysharesnapshottoaccount%2Csmb-copysharestoaccount%2Csmb-copysharesnapshottoaccount%2Csmb-copyaccounttoaccount%2Csmb-copyaccountsnapshottoaccount%2Csmb-synclocaltoaccount%2Csmb-syncaccounttolocal%2Csmb-syncaccounts%2Csmb-syncdirectory%2Csmb-syncsnapshottoaccount)
+
 ---
 
 ### Configure Azure Files and Azure Blob Storage
@@ -80,3 +82,8 @@
  - [Administer Azure Storage, part 1](https://www.youtube.com/watch?v=EH_2cTrg5PM)
  - [Administer Azure Storage, part 2](https://www.youtube.com/watch?v=WJ_0kPmyI1s)
  - [Administer Azure Storage, part 3](https://www.youtube.com/watch?v=2U_99n3_8bk)
+
+---
+
+### 🌐 Websites
+- [Mind Mesh Academy - Implementing and managing Azure Storage](https://www.mindmeshacademy.com/certifications/azure/az-104-microsoft-azure-administrator/study-guide/3-phase-3-implementing-managing-azure-storage)
