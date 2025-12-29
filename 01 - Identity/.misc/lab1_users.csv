@@ -1,0 +1,11 @@
+Name [displayName] Required,User name [userPrincipalName] Required,Initial password [passwordProfile] Required,Block sign in (Yes/No) [accountEnabled] Required,Mail nickname [mailNickname] Required,First name [givenName],Last name [surname],Job title [jobTitle],Department [department],Usage location [usageLocation],Street address [streetAddress],State or province [state],Country or region [country],Office [physicalDeliveryOfficeName],City [city],ZIP or postal code [postalCode],Office phone [telephoneNumber],Mobile phone [mobile]
+Jean Bombeur, jbombeur@lolecat.me, P@ssw0rd1234!, No, jbombeur
+Harry Cover, hcover@lolecat.me, P@ssw0rd1234!, No, hcover
+Mamadou Blanal, mblanal@lolecat.me, P@ssw0rd1234!, No, mblanal
+François Pignon, fpignon@lolecat.me, P@ssw0rd1234!, No, fpignon
+Roland Khülé, rkhule@lolecat.me, P@ssw0rd1234!, No, rkhule
+Sarah Pelle, spelle@lolecat.me, P@ssw0rd1234!, No, spelle
+Sarah Pelpu, spelpu@lolecat.me, P@ssw0rd1234!, No, spelpu
+Homère Dalor, hdalor@lolecat.me, P@ssw0rd1234!, No, hdalor
+Jean Tanrien, jtanrien@lolecat.me, P@ssw0rd1234!, No, jtanrien
+Yves Rogne, yrogne@lolecat.me, P@ssw0rd1234!, No, yrogne

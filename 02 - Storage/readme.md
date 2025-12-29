@@ -56,6 +56,7 @@
 
   #### Configure storage tiers
   - [Access tiers overview](https://learn.microsoft.com/en-us/azure/storage/blobs/access-tiers-overview)
+  - [Best practices for blobs access tier](https://learn.microsoft.com/en-us/azure/storage/blobs/access-tiers-best-practices)
 
   #### Configure soft delete for blobs and containers
   - [Soft delete for containers](https://learn.microsoft.com/en-us/azure/storage/blobs/soft-delete-container-overview)
