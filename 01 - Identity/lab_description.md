@@ -26,8 +26,10 @@ Create 2 Management Groups, directly under the Root Management Group:
 
 * Team A users have the Contributor role on the Team A Management Group
 * Team B users have the Contributor role on the Team B Management Group
-* Super Admin users have Owner permissions on the Root Management Group
-* Subscriptions Manager users have Contributor (or appropriate subscription management role) on the Root Management Group
+* Super Admin users have Owner role on the Root Management Group
+* Subscriptions Manager users have Management Group Contributor role on the Root Management Group
+
+➡️ [Solution here](./lab_part2.md)
 
 ---
 
@@ -46,6 +48,8 @@ Create 2 subscriptions per Management Group :
 │  ├─ 🔑dev
 │  ├─ 🔑prod
 ``` 
+
+➡️ [Solution here](./lab_part3.md)
 
 ---
 
@@ -70,3 +74,5 @@ Use Azure Policies to restrict resource deployment locations:
 * Team B can deploy resources only in Switzerland North
 
 Policy effect : deny
+
+➡️ [Solution here](./lab_part4.md)

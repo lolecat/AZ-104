@@ -12,6 +12,17 @@ Users must be assigned permissions via groups only.
 
 > Since I'm too lazy to take screenshots and paste them here, I'll do most of my labs with Powershell.
 
+Cmdlets used in this lab:
+- [Connect-MgGraph](https://learn.microsoft.com/en-us/powershell/module/microsoft.graph.authentication/connect-mggraph?view=graph-powershell-1.0)
+- [Disconnect-MgGraph](https://learn.microsoft.com/en-us/powershell/module/microsoft.graph.authentication/disconnect-mggraph?view=graph-powershell-1.0#related-links)
+- [New-SelfSignedCertificate](https://learn.microsoft.com/en-us/powershell/module/pki/new-selfsignedcertificate?view=windowsserver2025-ps)
+- [New-MgUser](https://learn.microsoft.com/en-us/powershell/module/microsoft.graph.users/new-mguser?view=graph-powershell-1.0)
+- [Get-MgUser](https://learn.microsoft.com/en-us/powershell/module/microsoft.graph.users/get-mguser?view=graph-powershell-1.0)
+- [New-MgGroup](https://learn.microsoft.com/en-us/powershell/module/microsoft.graph.groups/new-mggroup?view=graph-powershell-1.0)
+- [New-MgGroupMember](https://learn.microsoft.com/en-us/powershell/module/microsoft.graph.groups/new-mggroupmemberbyref?view=graph-powershell-1.0)
+
+<br>
+
 ## 1. Users creation  
 For this first step, we'll create users via a bulk operation.  
 In order to do it, we'll need the csv template, which is downloadable in the Entra ID portal. From there, go to the side blade -> **Manage** -> **Users**, and in the **Users management panel**, select **bulk operations**, then **bulk create**. From here, we can dowload the csv template file.  
@@ -63,10 +74,14 @@ It won't work, because we won't be able to connect through Graph. Why ? Microsof
 
 We're in a lab environment ... so of course we'll chose the 2nd option 🙃
 
+<br>
+
 ### 1. Create the App Registration
 In the Azure Portal, go to **Entra ID** -> **App registration** -> **New registration**.  
 From there, give a name to our registration, here ***"graph_automation_lab"***.  
  Keep the rest as default (single tenant access / no Redirect URI)
+
+<br>
 
  ### 2. Generate a certificate
  On our local machine, generate a self-signed certificate.  
@@ -82,10 +97,15 @@ Export-Certificate `
   -Cert $cert `
   -FilePath "~\Desktop\graph_cert.cer"
  ```
+<br>
+
 ### 3. Associate the certificate to the Registered App in Azure
-In the Azure Portal, go to **Entra ID** -> **App registration** -> **graph_automation_lab** -> **manage** -> **certificates and secrets**.  
+In the Azure Portal, go to :  
+ **Entra ID** -> **App registration** -> **graph_automation_lab** -> **manage** -> **certificates and secrets**.  
 Click on **certificates** tab, and **upload certificate**.
 Then upload the previously created certificate (how unexpected !)
+
+<br>
 
 ### 4. Give the right permissions to the Registered App
 **API permissions** → **Add a permission** → **Microsoft Graph**
@@ -96,6 +116,7 @@ Then upload the previously created certificate (how unexpected !)
 
 Once the permission added, click on the **"grant admin consent"** tab to validate the changes. 
 
+<br>
 
 ### 5. Connect with Powershell
 
@@ -182,6 +203,8 @@ Sarah Pelpu               xxx-xxx-xxx      spelpu@lolecat.me
 Yves Rogne                xxx-xxx-xxx      yrogne@lolecat.me
 ```
 
+<br>
+
 ## 2. Groups creation
 
 We need to create 4 groups : 
@@ -189,3 +212,105 @@ We need to create 4 groups :
 - Subscriptions managers
 - Team A
 - Team B
+
+Now that we can connect with the Graph module, this step should be easy. Let's do this with this Powershell block, where I'm creating an array of objects, where each objects contains the group's name and its direct members.  
+
+
+```powershell
+# Import the Microsoft Graph module -> Not necessary
+# Import-Module Microsoft.Graph
+
+# Get the previously created certificate's thumprint
+$certTp = (gci Cert:\CurrentUser\My\ | ?{$_.Subject -like "*graph*"}).Thumbprint
+
+# Authenticate to Microsoft Graph (you may need to provide your credentials) 
+Connect-MgGraph -TenantId "xxxx-xxxx-xxxx" -ClientId "xxxx-xxxx-xxxx" -CertificateThumbprint $certTp
+
+# Create an array of hashtables, containing groups names and members
+$groups = @(
+    @{Name="Super Admins"; Members=@("louis@lecatlouisoutlook.onmicrosoft.com")},
+    @{Name="Subscriptions Managers"; Members=@("louis@lolecat.me")},
+    @{Name="Team A"; Members=@("jtanrien@lolecat.me","jbombeur@lolecat.me","hdalor@lolecat.me","rkhule@lolecat.me","yrogne@lolecat.me")},
+    @{Name="Team B"; Members=@("hcover@lolecat.me","fpignon@lolecat.me","spelle@lolecat.me","spelpu@lolecat.me","mblanal@lolecat.me")}
+)
+
+$groups | % `
+{
+    $newGroup = New-MgGroup -DisplayName $_.Name `
+        -MailEnabled:$false `
+        -SecurityEnabled:$true `
+        -MailNickname ($_.Name -replace ' ','')
+
+    # Give some time  to Azure, let's not rush him
+    Start-Sleep -Seconds 5
+
+    foreach ($member in $_.Members)` 
+    {
+        $user = Get-MgUser -Filter "userPrincipalName eq '$member'"
+        New-MgGroupMember -GroupId $newGroup.Id -DirectoryObjectId $user.Id
+    }
+}
+```
+
+Once more, it won't be that easy ! :)
+Here's one of the errors we'll get if we try to execute the previous code :
+```powershell
+   ErrorIndex: 4
+
+Exception             : 
+    Type    : System.Exception
+    Message : [Authorization_RequestDenied] : Insufficient privileges to complete the operation.
+    HResult : -2146233088
+TargetObject          : { Headers = , body = Microsoft.Graph.PowerShell.Models.MicrosoftGraphGroup }     
+CategoryInfo          : InvalidOperation: ({ Headers = , body …crosoftGraphGroup
+}:<>f__AnonymousType2`2) [New-MgGroup_CreateExpanded], Exception
+FullyQualifiedErrorId : 
+Authorization_RequestDenied,Microsoft.Graph.PowerShell.Cmdlets.NewMgGroup_CreateExpanded
+ErrorDetails          : Insufficient privileges to complete the operation.
+
+                        Status: 403 (Forbidden)
+                        ErrorCode: Authorization_RequestDenied
+                        Date: 2025-12-30T02:31:45
+
+                        Headers:
+                        Cache-Control                 : no-cache
+                        Vary                          : Accept-Encoding
+                        Strict-Transport-Security     : max-age=31536000
+                        request-id                    : f120cfbe-d18c-43bb-9d8d-4089afaed543
+                        client-request-id             : 9972a30c-9a0b-4328-8b13-8296ecebf6f2
+                        x-ms-ags-diagnostic           : {"ServerInfo":{"DataCenter":"Southeast
+Asia","Slice":"E","Ring":"5","ScaleUnit":"001","RoleInstance":"SI2PEPF00001643"}}
+                        x-ms-resource-unit            : 1
+                        Date                          : Tue, 30 Dec 2025 02:31:45 GMT
+
+
+InvocationInfo        : 
+    MyCommand        : New-MgGroup_CreateExpanded
+    ScriptLineNumber : 3
+    OffsetInLine     : 5
+    HistoryId        : 17
+    Line             :     $newGroup = New-MgGroup -DisplayName $_.Name -MailEnabled:$false
+-SecurityEnabled:$true -MailNickname ($_.Name -replace ' ','')
+
+    Statement        : $newGroup = New-MgGroup -DisplayName $_.Name -MailEnabled:$false
+-SecurityEnabled:$true -MailNickname ($_.Name -replace ' ','')
+    PositionMessage  : At line:3 char:5
+                       +     $newGroup = New-MgGroup -DisplayName $_.Name -MailEnabled:$false  …
+                       +     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    InvocationName   : New-MgGroup
+    CommandOrigin    : Internal
+ScriptStackTrace      : at New-MgGroup<Process>, C:\Users\Louis\Documents\PowerShell\Modules\Microsoft.G 
+raph.Groups\2.34.0\exports\ProxyCmdletDefinitions.ps1: line 55720
+                        at <ScriptBlock>, <No file>: line 3
+                        at <ScriptBlock>, <No file>: line 1
+PipelineIterationInfo : 
+      0
+      1
+```
+
+Why ? Simply because previoulsly, when we added our App Registration for Graph, we granted it only the ***User.ReadWrite.All*** permission. Not group !  
+Following the 1.1.4 point of this lab, simply add the following permissions to the ***graph_automation_lab*** application in the App Registration panel :
+- *Group.ReadWrite.All*
+- *GroupMember.ReadWrite.All*
+
+Should be better now :)
