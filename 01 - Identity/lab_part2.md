@@ -164,8 +164,8 @@ Instead of permanent assignments, use **just-in-time access**:
 #### Step 1. Billing Permissions (for subscription creation)
 
 Via the Azure Portal :
-1. Sign in as a **Global Administrator** or **Billing Account Owner**
-2. Navigate to **Cost Management + Billing** → **Billing Account** → **Billing Profiles** → **Billing Profile** → **Invoice Sections**  
+1. Sign in as a Global Administrator or Billing Account Owner
+2. Navigate to **Cost Management + Billing** → **Billing Account** → **Billing Profiles** → select the Billing Profile → **Invoice Sections**  
 3. From there, select an Invoice Section → **Access control (IAM)**  
 4. Then, assign the ***Azure subscription creator*** role to the group.
 
