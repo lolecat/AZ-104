@@ -64,7 +64,6 @@ Use Azure Policies to enforce tag inheritance:
 * `env = dev` applied at Dev subscriptions
 * `env = prod` applied at Prod subscriptions
 
-Policy effect : modify or append
 
 #### Location restriction policies  
 
@@ -73,6 +72,5 @@ Use Azure Policies to restrict resource deployment locations:
 * Team A can deploy resources only in France Central
 * Team B can deploy resources only in Switzerland North
 
-Policy effect : deny
 
 ➡️ [Solution here](./lab_part4.md)
