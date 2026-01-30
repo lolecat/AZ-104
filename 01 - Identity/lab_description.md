@@ -1,4 +1,4 @@
-# AZ-104 – Identities & Governance Lab
+# AZ-104 – Identities & Governance Labs
 
 ### 1. Users and groups creation, admin access management
 
