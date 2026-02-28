@@ -1,0 +1,21 @@
+{
+  "Name": "Custom - SMB Share Contributor",
+  "Id": null,                              
+  "IsCustom": true,                        
+  "Description": "Allows for read, write, and delete access in Azure Storage file shares over SMB",
+  "assignableScopes": [
+    "/providers/Microsoft.Management/managementGroups/xxx-xxx-xxx"
+  ],
+  "Actions": [],
+  "NotActions": [],
+  "DataActions": [
+    "Microsoft.Storage/storageAccounts/fileServices/fileshares/files/read",
+    "Microsoft.Storage/storageAccounts/fileServices/fileshares/files/write",
+    "Microsoft.Storage/storageAccounts/fileServices/fileshares/files/delete",
+    "Microsoft.Storage/storageAccounts/fileServices/readFileBackupSemantics/action",
+    "Microsoft.Storage/storageAccounts/fileServices/writeFileBackupSemantics/action"
+  ],
+  "NotDataActions": [],
+  "Condition": null,
+  "ConditionVersion": null
+}

@@ -409,7 +409,7 @@ Get-AzStorageBlobByTag -TagFilterSqlExpression """project""='az104'" -Context $c
 ```
 <br>
 
-**Key takeaway:** Index tags excel at:
+Index tags excel at :
 - Quickly finding blobs without listing millions of objects
 - Driving lifecycle management rules (e.g., archive if `type='log'`)
 - Enabling fine-grained access control with ABAC

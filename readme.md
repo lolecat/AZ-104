@@ -1,6 +1,6 @@
 # AZ-104 : Azure Administrator
 
-## 📋 **Exam Structure**
+## 📋 Exam Structure
 | Section | Weight |
 |---------|--------|
 | **Manage Azure identities and governance** | 20-25% |
@@ -13,7 +13,7 @@
 ## 🎯 Study Sections
 
 <details>
-<summary><strong>Manage Azure identities and governance (20-25%)</strong></summary>
+<summary><strong>Manage Azure identities and governance</strong></summary>
 
 - **Manage Microsoft Entra users and groups**
   - Create users and groups
@@ -38,7 +38,7 @@
 </details>
 
 <details>
-<summary><strong>Implement and manage storage (15-20%)</strong></summary>
+<summary><strong>Implement and manage storage</strong></summary>
 
 - **Configure access to storage**
   - Configure Azure Storage firewalls and virtual networks
@@ -65,7 +65,7 @@
 </details>
 
 <details>
-<summary><strong>Deploy and manage Azure compute resources (20-25%)</strong></summary>
+<summary><strong>Deploy and manage Azure compute resources</strong></summary>
 
 - **Automate deployment of resources by using Azure Resource Manager templates or Bicep files**
   - Interpret an ARM template or Bicep file
@@ -101,7 +101,7 @@
 </details>
 
 <details>
-<summary><strong>Implement and manage virtual networking (15-20%)</strong></summary>
+<summary><strong>Implement and manage virtual networking</strong></summary>
 
 - **Configure and manage virtual networks in Azure**
   - Create and configure virtual networks and subnets
@@ -124,7 +124,7 @@
 </details>
 
 <details>
-<summary><strong>Monitor and maintain resources (10-15)%</strong></summary>
+<summary><strong>Monitor and maintain resources</strong></summary>
 
 - **Monitor resources in Azure**
   - Interpret metrics in Azure Monitor
@@ -152,7 +152,12 @@
 - [Section 3 - Compute](./03%20-%20Compute/readme.md)
 - [Section 4 - Network](./04%20-%20Network/readme.md)
 - [Section 5 - Monitoring](./05%20-%20Monitoring/readme.md)
-- [Mind Mesh Academy study guide](https://www.mindmeshacademy.com/certifications/azure/az-104-microsoft-azure-administrator/study-guide/)
 
 
+## 🧪 Labs
+- [Section 1 - Identity and governance](./01%20-%20Identity/lab_description.md)
+- [Section 2 - Storage](./02%20-%20Storage/lab_description.md)
+- [Section 3 - Compute](./03%20-%20Compute/lab_description.md)
+- [Section 4 - Network](./04%20-%20Network/lab_description.md)
+- [Section 5 - Monitoring](./05%20-%20Monitoring/lab_description.md)
 

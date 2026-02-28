@@ -1,4 +1,4 @@
-# AZ-104 - Implement and Manage Storage Labs
+# Labs : Implement and Manage Storage
 
 ### 1. Storage Account Creation & Configuration
 
@@ -95,29 +95,45 @@ Secure storage access with Shared Access Signatures:
 
 ---
 
-### 6. [In Progress] Azure Files & File Shares
+### 6. Azure Files & File Shares
 
 Deploy and configure Azure Files for cloud file sharing:
 
-* Create file shares with quotas and tiers
-* Mount file shares on Windows and Linux
-* Configure identity-based authentication
-* Create and restore snapshots
-* Enable soft delete for file shares
+1. Understand Azure Files tiers (Transaction Optimized, Hot, Cool, Premium) and protocols (SMB, NFS)
+2. Create a new storage account ***teamafilestore01*** optimized for file shares
+3. Create 2 file shares on ***teamafilestore01***
+   - ***shared-documents*** : Transaction Optimized tier, 100 GiB quota
+   - ***team-backups*** : Cool tier, 50 GiB quota
+4. Upload files and manage directories in ***shared-documents*** via Azure Portal
+5. Mount ***shared-documents*** on Windows using SMB and on Linux using SMB
+6. Configure snapshots on ***shared-documents***
+   - Create a manual snapshot
+   - Restore a deleted file from the snapshot
+7. Enable soft delete for file shares with a 14-day retention period
 
 ➡️ [Solution here](./lab_part6.md)
 
 ---
 
-### 7. [In Progress] Storage Security
+### 7. Storage Security
 
 Implement advanced security for storage accounts:
 
-* Configure Storage Firewalls and Virtual Network rules
-* Deploy Private Endpoints for storage
-* Compare Service Endpoints vs Private Endpoints
-* Configure customer-managed keys (CMK)
-* Enable infrastructure encryption
+1. Understand network security options for storage (Firewalls, Service Endpoints, Private Endpoints)
+2. Configure Storage Firewall on ***teamadevstorage01***
+   - Deny all public access by default
+   - Add your client IP as an allowed exception
+   - Verify access is blocked from other IPs
+3. Create a Virtual Network ***vnet-storage-lab*** with a subnet ***snet-apps***
+4. Configure a Service Endpoint for storage on ***snet-apps***
+   - Allow ***snet-apps*** to access ***teamadevstorage01***
+5. Deploy a Private Endpoint for ***teamafilestore01***
+   - Create a private DNS zone for blob resolution
+   - Verify private IP resolution with `nslookup`
+6. Compare Service Endpoints vs Private Endpoints (architecture and security trade-offs)
+7. Configure customer-managed keys (CMK) using Azure Key Vault
+   - Create a Key Vault and generate an encryption key
+   - Apply CMK encryption on ***teamadevstorage01***
 
 ➡️ [Solution here](./lab_part7.md)
 

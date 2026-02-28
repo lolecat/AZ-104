@@ -49,7 +49,7 @@ There are three types of SAS, each with different security implications :
 | **Granularity** | Service, container, or object level | Container or blob level | Container or blob level |
 | **Requires shared keys** | Yes | Yes | No |
 | **Revocation** | Regenerate account key, or use Stored Access Policy (Service SAS only) | Delete/modify Stored Access Policy, or regenerate key | Revoke User Delegation Key, or wait for expiry |
-| **Security level** | ⚠️ Lowest | ⚠️ Medium | ✅ Highest |
+| **Security level** |  Lowest |  Medium |  Highest |
 | **Microsoft recommendation** | Avoid if possible | Use with Stored Access Policy | **Preferred** - always use when possible |
 
 > **Key takeaway :** Microsoft recommends **User Delegation SAS** whenever possible because it doesn't require storage account keys. This aligns with what we did in Lab 1 : we disabled shared key access for better security. For Account SAS and Service SAS to work, shared keys must be enabled.
@@ -525,9 +525,9 @@ RelationLink      : {}
 
 SAS tokens can't be individually revoked once generated. If a token is compromised, you need other mechanisms to invalidate it. Let's explore all the options.
 
-### 6.1 Critical security limitation
+### 6.1 Security limitation
 
- ⚠️ **MAJOR SECURITY CONCERN**
+**MAJOR SECURITY CONCERN**
 
 Azure does NOT track or list SAS tokens that have been generated. There is no way to:
 - See which SAS tokens currently exist
@@ -569,7 +569,7 @@ Since you can't see or individually revoke SAS tokens, you need indirect revocat
 | **Revoke User Delegation Key** | All User Delegation SAS tokens | Compromised User Delegation SAS | Only affects User Delegation SAS. Requires Azure AD permissions |
 | **Wait for expiry** | Single token | Token has short expiry, not urgent | Requires knowing when the token expires (not visible in Azure). Passive approach |
 
-> **Exam tip :** Questions about SAS revocation often test whether you know that you **cannot** individually revoke a specific SAS token. The answer is always one of the indirect methods above. Also remember that **regenerating keys is disruptive** (breaks apps using those keys) while **deleting a Stored Access Policy is surgical** (only affects SAS tokens linked to that policy).
+> **Exam tip :** Questions about SAS revocation often test whether you know that you cannot individually revoke a specific SAS token. The answer is always one of the indirect methods above. Also remember that regenerating keys is disruptive (breaks apps using those keys) while deleting a Stored Access Policy is surgical (only affects SAS tokens linked to that policy).
 
 <br>
 
